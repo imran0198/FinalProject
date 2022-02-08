@@ -1,1 +1,54 @@
-<p>login works!</p>
+<div class="container">
+    <div class="row">
+      <div class="col-2">
+  
+      </div>
+  
+      <div style="background-color:rgb(9, 9, 105);"class="col-8">
+        <h3 style="text-align:center;color: aliceblue;  margin-top:25px;">Sign in to your account</h3>
+        <div class="background">
+          <form style="padding: 20px;"[formGroup]="loginForm" (ngSubmit)="sign()" class="bg-white" >
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" formControlName="email" name="email" placeholder="Enter your email address..."
+                class="form-control" aria-describedby="emailHelp">
+              <span style="color:red" *ngIf="email.invalid && email.touched">please enter the valid email</span>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label><a style="margin-left:320px;" href="">Forgot password?</a>
+  
+              <input type="password" class="form-control" formControlName="pass" name="pass"
+                placeholder="Enter your password...">
+              <span style="color:red" *ngIf="pass.invalid && pass.touched">please enter the valid password</span>
+            </div>
+            <button [disabled]="loginForm.invalid" type="submit" class="btn btn-success btn-lg btn-block">Sign in</button>
+          </form>
+        </div>
+      </div>
+  
+      <div  class="col-2">
+  
+      </div>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="row">
+      <div  class="col-2">
+  
+      </div>
+  
+      <div style="background-color:rgb(9, 9, 105) ; " class="col-8">
+        <div class="user">
+          <h5 style="text-align: center;">New user? <a href="">Create an account</a></h5>
+        </div>
+  
+      </div>
+      <div  class="col-2">
+  
+      </div>
+    </div>
+  </div>
+  
+  
+
